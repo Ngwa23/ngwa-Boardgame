@@ -119,12 +119,12 @@
 
 	 <distributionManagement>
         <repository>
-            <id>maven-releases</id>
-            <url>http://43.205.118.230:8081/repository/maven-releases/</url>
+            <id>bgame-releases</id>
+            <url>http://172.16.59.137::8081/repository/bgame-releases/</url>
         </repository>
         <snapshotRepository>
             <id>maven-snapshots</id>
-            <url>http://43.205.118.230:8081/repository/maven-snapshots/</url>
+            <url>http://172.16.59.137::8081/repository/bgame-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
