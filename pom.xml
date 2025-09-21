@@ -120,11 +120,11 @@
 	 <distributionManagement>
         <repository>
             <id>bgame-releases</id>
-            <url>http://172.16.59.137::8081/repository/bgame-releases/</url>
+            <url>http://192.168.244.145:8081/repository/bgame-releases/</url>
         </repository>
         <snapshotRepository>
             <id>bgame-snapshots</id>
-            <url>http://172.16.59.137::8081/repository/bgame-snapshots/</url>
+            <url>http://192.168.244.145:8081/repository/bgame-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
