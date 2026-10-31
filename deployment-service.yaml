@@ -47,7 +47,7 @@ spec:
       #targetPort: 8080 
   #type: ClusterIP # type of the service.
 
-  ---
+
 
 #apiVersion: v1 # Kubernetes API version
 #kind: Service # Kubernetes resource kind we are creating
