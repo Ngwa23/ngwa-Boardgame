@@ -1,36 +1,52 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: boardgame-deployment
+  name: bgame
 spec:
   selector:
     matchLabels:
-      app: boardgame
-  replicas: 2 # Number of replicas that will be created for this deployment
+      app: bgame
+  replicas: 4 # Number of replicas that will be created for this deployment
   template:
     metadata:
       labels:
-        app: boardgame
+        app: bgame
     spec:
       containers:
-        - name: boardgame
-          image: adijaiswal/boardshack:latest # Image that will be used to containers in the cluster
+        - name: bgame
+          image: ngwa23/bgame:v4 # Image that will be used to containers in the cluster
           imagePullPolicy: Always
           ports:
             - containerPort: 8080 # The port that the container is running on in the cluster
-
-
 ---
-
-apiVersion: v1 # Kubernetes API version
-kind: Service # Kubernetes resource kind we are creating
-metadata: # Metadata of the resource kind we are creating
-  name: boardgame-ssvc
+apiVersion: v1
+kind: Service
+metadata:
+  name: bgamesvc
 spec:
+  type: NodePort
   selector:
-    app: boardgame
+    app: bgame
   ports:
-    - protocol: "TCP"
+    - protocol: TCP
       port: 80
-      targetPort: 8080 
-  type: LoadBalancer # type of the service.
+      targetPort: 8080
+      nodePort: 30007  # Optional (default: 30000-32767)
+
+
+#apiVersion: v1
+#kind: Service
+#metadata:
+  #name: bgamesvc
+#spec:
+  #selector:
+    #app: bgame
+  #ports:
+  # - protocol: "TCP"
+     # port: 80
+      #targetPort: 8080 
+  #type: ClusterIP # type of the service.
+  
+
+
+
