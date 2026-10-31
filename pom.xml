@@ -119,12 +119,12 @@
 
 	 <distributionManagement>
         <repository>
-            <id>bgame-releases</id>
-            <url>http://192.168.244.145:8081/repository/bgame-releases/</url>
+            <id>Boardgame-releases</id>
+            <url>http://172.20.10.4:8081/repository/Boardgame-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>bgame-snapshots</id>
-            <url>http://192.168.244.145:8081/repository/bgame-snapshots/</url>
+            <id>Boardgame-snapshots</id>
+            <url>http://172.20.10.4:8081/repository/Boardgame-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
