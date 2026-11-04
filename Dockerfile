@@ -28,7 +28,7 @@ WORKDIR /app
 # Copy the fat/executable jar from the build stage
 COPY --from=build /workspace/target/*.jar /app/app.jar
 
-EXPOSE 8080
+EXPOSE 8090
 
 USER appuser
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
